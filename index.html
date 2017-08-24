@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Directive Repeat</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="angular.min.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/amRepeatDir.js"></script>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <h1>am-repeat directive using array</h1>
+    <div am-repeat="x in cars" >
+        <h2>PARA {{ $newIndex + 1}}</h2>
+
+        <h3>{{ x }}</h3>
+        <h4>Details and Specifications</h4>
+    </div>
+    <p>Extras</p>
+    <div>Text </div>
+    <p>
+        Some More Text..
+    </p>
+    <h1>am-repeat directive using array of an object</h1>
+    <div am-repeat="x in persons">
+    <h2>Paragaph {{$newIndex + 1}}</h2>
+
+        <p>{{x.fname}} {{x.lname}}</p>
+
+</div>
+</div>
+
+</body>
+</html>
